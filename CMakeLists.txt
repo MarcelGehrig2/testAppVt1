@@ -16,5 +16,16 @@ link_directories(${EEROS_LIB_DIR})
  
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
  
-add_executable(testappvt1 main.cpp)
+add_executable(testappvt1
+	main.cpp
+	
+	sequences/MainSequence.cpp
+	sequences/SequenceA.cpp
+	sequences/SequenceB.cpp
+)
+
+
+
+
 target_link_libraries(testappvt1 eeros)
+add_subdirectory(sequences)
