@@ -10,7 +10,7 @@ SequenceA::SequenceA(Sequencer& S, Sequence* caller, std::__cxx11::string name):
 }
 
 
-void SequenceA::action()
+int SequenceA::action()
 {
 	std::this_thread::sleep_for(std::chrono::seconds(3));
 }

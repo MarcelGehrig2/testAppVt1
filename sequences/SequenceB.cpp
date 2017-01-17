@@ -8,7 +8,7 @@ SequenceB::SequenceB(Sequencer& S, Sequence* caller, std::__cxx11::string name):
 
 }
 
-void SequenceB::action()
+int SequenceB::action()
 {
 	std::this_thread::sleep_for(std::chrono::seconds(5));
 }

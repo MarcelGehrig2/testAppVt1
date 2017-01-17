@@ -17,13 +17,12 @@ Sequence(S, this, name), seqA1(S, this, "seqA1"), seqB1(S, this, "seqB1")
 // 	seqB1->join();
 }
 
-void MainSequence::action()
+int MainSequence::action()
 {
 	log.info() << "MainSequence started";
 	
-	std::this_thread::sleep_for(std::chrono::seconds(1));
-	log.info() << "MainSequence started 2";
 	seqA1.start();
+	std::this_thread::sleep_for(std::chrono::seconds(1));
 	seqB1.start();
 // 	seqA1.cv.notify_one();
 // 	seqB1.run();

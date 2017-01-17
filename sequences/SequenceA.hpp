@@ -13,7 +13,7 @@ namespace testappsequencer {
 		SequenceA(Sequencer& S, Sequence* caller, std::__cxx11::string name);
 		
 		bool blocking = true;
-		void action();
+		int action();
 	};
 
 	

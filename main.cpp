@@ -10,7 +10,7 @@
 
 
 using namespace eeros;
-using namespace eeros::logger;
+using namespace eeros::logger;		
 // 	using namespace eeros::sequencer;
 using namespace testappsequencer;
 	
