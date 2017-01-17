@@ -15,7 +15,8 @@ namespace testappsequencer {
 
 	// MainSequence(Sequencer& S, Sequence* caller, std::__cxx11::string name);
 
-		void run();
+		void action();
+// 		void start();
 		
 		SequenceA seqA1;
 	// 	SequenceA seqA2;

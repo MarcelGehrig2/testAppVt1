@@ -12,7 +12,6 @@ namespace testappsequencer {
 	public:
 		SequenceA(Sequencer& S, Sequence* caller, std::__cxx11::string name);
 		
-		void run();
 		bool blocking = true;
 		void action();
 	};

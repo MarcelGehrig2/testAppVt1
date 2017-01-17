@@ -8,9 +8,7 @@ SequenceB::SequenceB(Sequencer& S, Sequence* caller, std::__cxx11::string name):
 
 }
 
-void SequenceB::run()
+void SequenceB::action()
 {
-	log.info() << "SequenceB run start";
 	std::this_thread::sleep_for(std::chrono::seconds(5));
-	log.info() << "SequenceB run stop";
 }

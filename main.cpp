@@ -17,6 +17,7 @@ using namespace testappsequencer;
 int main() {
 	
 	StreamLogWriter w(std::cout);
+	w.show(4);
 	Logger<LogWriter>::setDefaultWriter(&w);
 	Logger<LogWriter> log;
  
@@ -41,9 +42,11 @@ int main() {
 	log.info() << "Main Sequence added";
 	
 // 	S.join();
+// 	std::this_thread::sleep_for(std::chrono::milliseconds(100));
+// 	mainSequence.seqB1.cv.notify_all();
 	
 	mainSequence.join();
-	
+	log.info() << "Main Sequence joined";
 	
 	
 	
