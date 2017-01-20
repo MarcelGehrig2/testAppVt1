@@ -33,8 +33,8 @@ int MainSequence::action()
 	seqB2.start();
 	seqA1.start();
 // 	std::cout << seqB3 << std::endl;
-// 	seqB3->start();
 	seqB3.start();
+// 	seqB3.start();
 // 	seqA1.join();
 	seqB3.join();
 	

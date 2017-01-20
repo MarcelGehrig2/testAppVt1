@@ -24,6 +24,7 @@ add_executable(testappvt1
 	sequences/SequenceB.cpp
 	
 	steps/StepA.cpp
+	steps/StepB.cpp
 )
 
 
