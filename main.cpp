@@ -29,22 +29,15 @@ int main() {
 	
 	
 	eeros::sequencer::Sequencer S;
-	
-	std::__cxx11::string name="mainSequence";
+
 // 	MainSequence 
-	MainSequence mainSequence(S, name);
-// 	MainSequence mainSequence(S);
-// 	ParallelScaraMainSequence mainSequence(&sequencer, &controlSystem, &safetySystem);
+	MainSequence mainSequence(S, "mainSequence");
 	
+	log.info() << "Main Pre S.addMainSequence(&mainSequence);";
 	S.addMainSequence(&mainSequence);
 	S.run();
 	
 	log.info() << "Main Sequence added";
-	
-// 	S.join();
-// 	std::this_thread::sleep_for(std::chrono::milliseconds(100));
-// 	mainSequence.seqB1.cv.notify_all();
-	
 	mainSequence.join();
 	log.info() << "Main Sequence joined";
 	

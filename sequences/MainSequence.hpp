@@ -12,15 +12,16 @@ namespace testappsequencer {
 	public:
 		MainSequence(eeros::sequencer::Sequencer& S, std::__cxx11::string name);
 
-
-	// MainSequence(Sequencer& S, Sequence* caller, std::__cxx11::string name);
-
 		int action();
-// 		void start();
 		
 		SequenceA seqA1;
 	// 	SequenceA seqA2;
 		SequenceB seqB1; 
+		SequenceB seqB2; 
+		SequenceB seqB3; 
+// 		SequenceB* seqB3; 
+		
+		
 	};
 	
 	

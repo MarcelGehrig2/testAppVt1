@@ -10,33 +10,36 @@ using namespace eeros::sequencer;
 
 
 MainSequence::MainSequence(Sequencer& S, std::__cxx11::string name):
-Sequence(S, this, name), seqA1(S, this, "seqA1"), seqB1(S, this, "seqB1")
+Sequence(S, this, name),
+
+seqA1(S, this, "seqA1"),
+seqB1(S, this, "seqB1"),
+seqB2(S, this, "seqB2"),
+seqB3(S, this, "seqB3")
 {
-// 	seqA1 = SequenceA(S, "seqA1");
-// 	seqA2->join();
-// 	seqB1->join();
+	setIsNonBlocking();
+// 	seqB3 = new SequenceB(S, this, "seqB3");
 }
 
 int MainSequence::action()
 {
-	log.info() << "MainSequence started";
+// 	seqB3 = new SequenceB(S, this, "seqB3");
 	
-	seqA1.start();
+	
+	log.info() << "MainSequence started";
+// 	seqA1.start();
 	std::this_thread::sleep_for(std::chrono::seconds(1));
 	seqB1.start();
-// 	seqA1.cv.notify_one();
-// 	seqB1.run();
-// 	seqA1.action();
-// 	seqA1.run();
+	seqB2.start();
+	seqA1.start();
+// 	std::cout << seqB3 << std::endl;
+// 	seqB3->start();
+	seqB3.start();
 // 	seqA1.join();
-	seqA1.join();
+	seqB3.join();
 	
+// 	delete seqB3;
 	log.info() << "MainSequence ended";
 }
 
 
-// void MainSequence::start()
-// {
-// // 	Sequence::start();
-// 	cv.notify_one();
-// }
