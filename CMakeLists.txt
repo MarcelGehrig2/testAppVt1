@@ -22,6 +22,8 @@ add_executable(testappvt1
 	sequences/MainSequence.cpp
 	sequences/SequenceA.cpp
 	sequences/SequenceB.cpp
+	
+	steps/StepA.cpp
 )
 
 
@@ -29,3 +31,4 @@ add_executable(testappvt1
 
 target_link_libraries(testappvt1 eeros)
 add_subdirectory(sequences)
+add_subdirectory(steps)
