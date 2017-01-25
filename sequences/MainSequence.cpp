@@ -29,12 +29,12 @@ int MainSequence::action()
 	log.info() << "MainSequence started";
 // 	seqA1.start();
 	std::this_thread::sleep_for(std::chrono::seconds(1));
-	seqB1.start();
-	seqB2.start();
-	seqA1.start();
+	seqB1();
+	seqB2();
+	seqA1();
 // 	std::cout << seqB3 << std::endl;
-	seqB3.start();
-// 	seqB3.start();
+	seqB3();
+// 	seqB3();
 // 	seqA1.join();
 	seqB3.join();
 	

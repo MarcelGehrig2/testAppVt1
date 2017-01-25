@@ -9,6 +9,11 @@ SequenceB::SequenceB(Sequencer& S, Sequence* caller, std::__cxx11::string name):
 	setIsNonBlocking();
 }
 
+int SequenceB::operator()()
+{
+	return Sequence::start();
+}
+
 int SequenceB::action()
 {
 	StepB sB = StepB(S, this);

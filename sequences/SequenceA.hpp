@@ -12,6 +12,7 @@ namespace testappsequencer {
 	public:
 		SequenceA(Sequencer& S, Sequence* caller, std::__cxx11::string name);
 		
+		int operator()();
 		int action();
 	};
 

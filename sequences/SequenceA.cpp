@@ -9,6 +9,12 @@ SequenceA::SequenceA(Sequencer& S, Sequence* caller, std::__cxx11::string name):
 	setIsBlocking();
 }
 
+int SequenceA::operator()()
+{
+	return Sequence::start();
+}
+
+
 
 int SequenceA::action()
 {
