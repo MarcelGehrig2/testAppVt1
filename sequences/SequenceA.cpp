@@ -4,7 +4,7 @@
 using namespace testappsequencer;
 
 
-SequenceA::SequenceA(Sequencer& S, Sequence* caller, std::__cxx11::string name): Sequence(S, caller, name)
+SequenceA::SequenceA(Sequencer& S, BaseSequence* caller, std::__cxx11::string name): Sequence(S, caller, name)
 {
 	setIsBlocking();
 }

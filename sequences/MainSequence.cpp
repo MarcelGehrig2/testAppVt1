@@ -10,7 +10,7 @@ using namespace eeros::sequencer;
 
 
 MainSequence::MainSequence(Sequencer& S, std::__cxx11::string name):
-Sequence(S, this, name),
+Sequence(S, name),
 
 seqA1(S, this, "seqA1"),
 seqB1(S, this, "seqB1"),

@@ -35,7 +35,7 @@ int main() {
 	
 	log.info() << "Main Pre S.addMainSequence(&mainSequence);";
 	S.addMainSequence(&mainSequence);
-	S.run();
+// 	S.run();
 	
 	log.info() << "Main Sequence added";
 	mainSequence.join();

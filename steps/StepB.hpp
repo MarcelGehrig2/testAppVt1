@@ -1,11 +1,11 @@
-// #include <eeros/sequencer/Step.hpp>
-#include <eeros/sequencer/Sequence.hpp>
-#include <eeros/sequencer/Sequencer.hpp>
-#include <iostream>
+#include <eeros/sequencer/Step.hpp>
 
 namespace testappsequencer {
 	
 	using namespace eeros::sequencer;
+	
+// 	class Sequence;
+// 	class Sequencer;
 	
 	class StepB : public Step {
 	public:

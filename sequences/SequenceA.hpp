@@ -10,7 +10,7 @@ namespace testappsequencer {
 	
 	class SequenceA : public Sequence {
 	public:
-		SequenceA(Sequencer& S, Sequence* caller, std::__cxx11::string name);
+		SequenceA(Sequencer& S, BaseSequence* caller, std::__cxx11::string name);
 		
 		int operator()();
 		int action();
