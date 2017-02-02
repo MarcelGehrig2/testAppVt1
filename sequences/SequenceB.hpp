@@ -7,14 +7,16 @@ namespace testappsequencer {
 	
 	using namespace eeros::sequencer;
 	
+	class TestAppCS;
 	
 	class SequenceB : public Sequence {
 	public:
-		SequenceB(Sequencer& S, BaseSequence* caller, std::__cxx11::string name);
+		SequenceB(Sequencer& S, TestAppCS* CS, BaseSequence* caller, std::__cxx11::string name);
 
 		int operator()();
 		int action();
 		
+		TestAppCS* CS;
 	};
 
 	

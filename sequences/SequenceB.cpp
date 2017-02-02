@@ -4,7 +4,8 @@
 using namespace testappsequencer;
 
 
-SequenceB::SequenceB(Sequencer& S, BaseSequence* caller, std::__cxx11::string name): Sequence(S, caller, name)
+SequenceB::SequenceB(Sequencer& S, TestAppCS* CS, BaseSequence* caller, std::__cxx11::string name)
+: Sequence(S, caller, name), CS(CS)
 {
 	setIsNonBlocking();
 }
@@ -16,7 +17,7 @@ int SequenceB::operator()()
 
 int SequenceB::action()
 {
-	StepB sB = StepB(S, this);
+	StepB sB = StepB(S, CS, this);
 	
 	log.info() << "SequenceB::action()";
 	sB.start();

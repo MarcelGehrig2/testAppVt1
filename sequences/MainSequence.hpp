@@ -1,16 +1,21 @@
 #include <eeros/sequencer/Sequence.hpp>
 #include <eeros/sequencer/Sequencer.hpp>
 
+// #include "TestAppSequencer.hpp"
 #include "SequenceA.hpp"
 #include "SequenceB.hpp"
+#include "SequenceErrorA.hpp"
+
+// #include "../control/CS.hpp"
 
 namespace testappsequencer {
 
-	
+	class TestAppCS;
 	
 	class MainSequence : public eeros::sequencer::Sequence {
 	public:
-		MainSequence(eeros::sequencer::Sequencer& S, std::__cxx11::string name);
+// 		MainSequence(Sequencer& S, std::__cxx11::string name);
+		MainSequence(Sequencer& S, TestAppCS* CS, std::__cxx11::string name);
 
 		int action();
 		
@@ -21,7 +26,13 @@ namespace testappsequencer {
 		SequenceB seqB3; 
 // 		SequenceB* seqB3; 
 		
+		SequenceErrorA seqEA1;
 		
+// 		TestAppSequencer S;
+// 		TestAppCS* getCS() const;
+		TestAppCS* CS;
+	private:
+// 		static TestAppCS* CS;
 	};
 	
 	

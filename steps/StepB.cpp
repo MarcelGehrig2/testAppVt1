@@ -4,8 +4,8 @@
 
 using namespace testappsequencer;
 
-StepB::StepB(Sequencer& S, Sequence* caller)
-: Step(S, caller)
+StepB::StepB(Sequencer& S, TestAppCS* CS, BaseSequence* caller)
+: Step(S, caller), CS(CS)
 {
 	
 }

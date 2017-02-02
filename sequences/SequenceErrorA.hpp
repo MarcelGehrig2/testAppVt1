@@ -1,7 +1,5 @@
-#include <eeros/sequencer/Sequencer.hpp>
 #include <eeros/sequencer/Sequence.hpp>
-
-// #include <iostream>
+// #include <eeros/sequencer/Sequencer.hpp>
 
 
 
@@ -11,10 +9,10 @@ namespace testappsequencer {
 	
 	class TestAppCS;
 	
-	class SequenceA : public Sequence {
+	class SequenceErrorA : public Sequence {
 	public:
-		SequenceA(Sequencer& S, TestAppCS* CS, BaseSequence* caller, std::__cxx11::string name);
-		
+		SequenceErrorA(Sequencer& S, TestAppCS* CS, BaseSequence* caller, std::__cxx11::string name);
+
 		int operator()();
 		int action();
 		
