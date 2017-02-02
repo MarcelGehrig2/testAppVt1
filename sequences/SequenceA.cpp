@@ -23,13 +23,16 @@ int SequenceA::action()
 {
 	StepA sA = StepA(S, CS, this);
 	sA.setTimeoutTime(5);
-	sA.setTimeoutBehavior(eeros::sequencer::abortOwnerSequence);
+	sA.setTimeoutBehavior(eeros::sequencer::restartOwner);
 	sA.setTimeoutExceptionSequence(&seqEA2);
 	
 	log.info() << "SequenceA::action()";
+	log.info() << "SequenceA: sA.start() 1";
 	sA.start();
-	sA.setTimeoutTime(2);
+// 	sA.setTimeoutTime(2);
+	log.info() << "SequenceA: sA.start() 2";
 	sA.start();
 // 	std::this_thread::sleep_for(std::chrono::seconds(1));
+	log.info() << "SequenceA: sA.start() 3";
 	sA.start();
 }
