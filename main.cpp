@@ -22,10 +22,10 @@ using namespace eeros::logger;
 using namespace testappsequencer;
 
 
-volatile bool running = true;
-void signalHandler(int signum) {
-	running = false;
-}
+// volatile bool running = true;
+// void signalHandler(int signum) {
+// 	running = false;
+// }
 
 int main() {
 // 	signal(SIGINT, signalHandler);

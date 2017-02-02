@@ -1,6 +1,8 @@
 #include <eeros/sequencer/Sequencer.hpp>
 #include <eeros/sequencer/Sequence.hpp>
 
+#include "SequenceExceptionA.hpp"
+
 // #include <iostream>
 
 
@@ -17,6 +19,8 @@ namespace testappsequencer {
 		
 		int operator()();
 		int action();
+		
+		SequenceExceptionA seqEA2;
 		
 		TestAppCS* CS;
 	};

@@ -25,7 +25,7 @@ seqEA1(S, CS, this, "seqEA1")
 {
 // 	CS.probe
 	setIsNonBlocking();
-	seqA1.setTimeoutTime(2);
+	seqA1.setTimeoutTime(20);
 	seqA1.setTimeoutExceptionSequence(&seqEA1);
 // 	seqA1.BaseSequence::setTimeoutTime(2);
 // 	seqA1.setTimeoutTime(2);

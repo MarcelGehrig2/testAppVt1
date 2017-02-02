@@ -4,7 +4,7 @@
 // #include "TestAppSequencer.hpp"
 #include "SequenceA.hpp"
 #include "SequenceB.hpp"
-#include "SequenceErrorA.hpp"
+#include "SequenceExceptionA.hpp"
 
 // #include "../control/CS.hpp"
 
@@ -26,7 +26,7 @@ namespace testappsequencer {
 		SequenceB seqB3; 
 // 		SequenceB* seqB3; 
 		
-		SequenceErrorA seqEA1;
+		SequenceExceptionA seqEA1;
 		
 // 		TestAppSequencer S;
 // 		TestAppCS* getCS() const;

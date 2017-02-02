@@ -26,7 +26,7 @@ add_executable(testappvt1
 	sequences/SequenceA.cpp
 	sequences/SequenceB.cpp
 	
-	sequences/SequenceErrorA.cpp
+	sequences/SequenceExceptionA.cpp
 	
 	steps/StepA.cpp
 	steps/StepB.cpp
