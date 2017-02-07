@@ -30,9 +30,11 @@ int SequenceA::action()
 	log.info() << "SequenceA::action()";
 	log.info() << "SequenceA: sA.start() 1";
 	sA.start();
-	sA.setTimeoutTime(2);
+// 	pauseSequence();
+// 	sA.setTimeoutTime(2);
 	log.info() << "SequenceA: sA.start() 2";
 	sA.start();
+	restartSequence();
 // 	std::this_thread::sleep_for(std::chrono::seconds(1));
 	log.info() << "SequenceA: sA.start() 3";
 	sA.start();

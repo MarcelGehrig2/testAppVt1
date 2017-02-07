@@ -1,8 +1,8 @@
 #include "MainSequence.hpp"
-#include <eeros/sequencer/Sequence.hpp>
-#include <eeros/sequencer/BaseSequence.hpp>
-#include <eeros/sequencer/Sequencer.hpp>
-#include "../control/TestAppCS.hpp"
+// #include <eeros/sequencer/Sequence.hpp>
+// #include <eeros/sequencer/BaseSequence.hpp>
+// #include <eeros/sequencer/Sequencer.hpp>
+// #include "../control/TestAppCS.hpp"
 
 using namespace testappsequencer;
 using namespace eeros;
@@ -28,6 +28,7 @@ seqEA1(S, CS, this, "seqEA1")
 	seqA1.setTimeoutTime(55);
 	seqA1.setTimeoutExceptionSequence(&seqEA1);
 	seqA1.setTimeoutBehavior(restartOwner);
+// 	seqA1.set
 // 	seqA1.BaseSequence::setTimeoutTime(2);
 // 	seqA1.setTimeoutTime(2);
 // 	seqA1.setTimeoutTime(2);
@@ -50,7 +51,7 @@ int MainSequence::action()
 // 	std::cout << seqB3 << std::endl;
 	seqB3();
 // 	seqB3();
-	seqA1.join();
+// 	seqA1.join();
 	seqB1.join();
 	seqB2.join();
 	seqB3.join();

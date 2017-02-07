@@ -1,9 +1,10 @@
 #include "StepA.hpp"
-#include <eeros/sequencer/Sequence.hpp>
-#include <eeros/sequencer/Sequencer.hpp>
-#include "../control/SequencerProbe.hpp"
+// #include <eeros/sequencer/Sequence.hpp>
+// #include <eeros/sequencer/Sequencer.hpp>
+// #include "../control/SequencerProbe.hpp"
 #include "../control/TestAppCS.hpp"
-#include "../sequences/MainSequence.hpp"
+#include <eeros/sequencer/Sequencer.hpp>
+// #include "../sequences/MainSequence.hpp"
 
 
 using namespace testappsequencer;
@@ -28,7 +29,8 @@ int StepA::action()
 // 	std::this_thread::sleep_for(std::chrono::seconds(3));
 	
 // 	CS->
-
+	log.info() <<  "ID: " << S.getSeqenceByName("seqB1")->getID();
+	log.info() <<  "ID: " << S.getSeqenceByName("seqB2")->getID();
 }
 
 

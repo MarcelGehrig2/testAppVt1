@@ -8,7 +8,7 @@
 #include <eeros/logger/Logger.hpp>
 #include <eeros/logger/StreamLogWriter.hpp>
 
-#include <eeros/sequencer/Sequence.hpp>
+// #include <eeros/sequencer/Sequence.hpp>
 
 #include "control/TestAppCS.hpp"
 #include "safety/TestAppSafetyProperties.hpp"
