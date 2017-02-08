@@ -23,3 +23,10 @@ int SequenceB::action()
 	sB.start();
 	std::this_thread::sleep_for(std::chrono::seconds(2));
 }
+
+
+void SequenceB::say(std::string stuff)
+{
+// 	myStuff = stuff;
+	log.info() << "Sequence " << getName() << " says: " << stuff;
+}

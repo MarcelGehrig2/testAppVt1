@@ -16,6 +16,10 @@ namespace testappsequencer {
 		int operator()();
 		int action();
 		
+		void say(std::string stuff);
+// 		std::string hi();
+		std::string myStuff;
+		
 		TestAppCS* CS;
 	};
 

@@ -28,6 +28,7 @@ seqEA1(S, CS, this, "seqEA1")
 	seqA1.setTimeoutTime(55);
 	seqA1.setTimeoutExceptionSequence(&seqEA1);
 	seqA1.setTimeoutBehavior(restartOwner);
+// 	seqA1.addMonitor();
 // 	seqA1.set
 // 	seqA1.BaseSequence::setTimeoutTime(2);
 // 	seqA1.setTimeoutTime(2);
