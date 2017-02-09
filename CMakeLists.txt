@@ -19,24 +19,27 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 add_executable(testappvt1
 	main.cpp
 	
-	control/TestAppCS.cpp
-	safety/TestAppSafetyProperties.cpp
+	control/controlSystem/TestAppCS.cpp
+	control/safetySystem/TestAppSafetyProperties.cpp
 	
-	sequences/MainSequence.cpp
-	sequences/SequenceA.cpp
-	sequences/SequenceB.cpp
+	control/sequences/SequenceExceptionA.cpp
 	
-	sequences/SequenceExceptionA.cpp
+	control/steps/StepA.cpp
+	control/steps/StepB.cpp
 	
-	steps/StepA.cpp
-	steps/StepB.cpp
+	application/sequences/MainSequence.cpp
+	application/sequences/SequenceA.cpp
+	application/sequences/SequenceB.cpp
+	
 )
 
 
 
 
 target_link_libraries(testappvt1 eeros)
-add_subdirectory(sequences)
-add_subdirectory(steps)
-add_subdirectory(control)
-add_subdirectory(safety)
+# add_subdirectory(sequences)
+# add_subdirectory(steps)
+# add_subdirectory(controlSystem)
+# add_subdirectory(safetySystem)
+# add_subdirectory(control)
+# add_subdirectory(application)

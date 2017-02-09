@@ -1,5 +1,5 @@
 #include "SequenceA.hpp"
-#include "../steps/StepA.hpp"
+#include "../../control/steps/StepA.hpp"
 
 using namespace testappsequencer;
 

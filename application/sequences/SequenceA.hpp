@@ -1,7 +1,8 @@
 // #include <eeros/sequencer/Sequencer.hpp>
 // #include <eeros/sequencer/Sequence.hpp>
 
-#include "SequenceExceptionA.hpp"
+#include "../../control/sequences/SequenceExceptionA.hpp"
+// #include "control/Se
 
 // #include <iostream>
 

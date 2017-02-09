@@ -4,7 +4,7 @@
 // #include "TestAppSequencer.hpp"
 #include "SequenceA.hpp"
 #include "SequenceB.hpp"
-#include "SequenceExceptionA.hpp"
+#include "../../control/sequences/SequenceExceptionA.hpp"
 
 // #include "../control/CS.hpp"
 

@@ -1,9 +1,9 @@
 #include "StepA.hpp"
-#include "../sequences/SequenceB.hpp"
+// #include "../sequences/SequenceB.hpp"
 // #include <eeros/sequencer/Sequence.hpp>
 // #include <eeros/sequencer/Sequencer.hpp>
 // #include "../control/SequencerProbe.hpp"
-#include "../control/TestAppCS.hpp"
+#include "../controlSystem/TestAppCS.hpp"
 #include <eeros/sequencer/Sequencer.hpp>
 // #include "../sequences/MainSequence.hpp"
 
@@ -30,10 +30,13 @@ int StepA::action()
 // 	std::this_thread::sleep_for(std::chrono::seconds(3));
 	
 // 	CS->
+	
+	/*
 	log.info() <<  "ID: " << S.getSeqenceByName("seqB1")->getID();
 	SequenceB* seqB1 = (SequenceB*)(S.getSeqenceByName("seqB1"));
 	seqB1->say("hallo");
 	log.info() <<  "ID: " << S.getSeqenceByName("seqB2")->getID();
+	*/
 }
 
 

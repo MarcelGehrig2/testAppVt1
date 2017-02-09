@@ -1,7 +1,7 @@
 
 
 #include "TestAppSafetyProperties.hpp"
-#include "../control/TestAppCS.hpp"
+#include "../controlSystem/TestAppCS.hpp"
  
 #include <eeros/hal/HAL.hpp>
 #include <eeros/safety/InputAction.hpp>
