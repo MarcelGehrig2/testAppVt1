@@ -2,7 +2,6 @@
 #include <eeros/sequencer/Sequencer.hpp>
 
 
-
 namespace testappsequencer {
 	
 	using namespace eeros::sequencer;
@@ -17,7 +16,6 @@ namespace testappsequencer {
 		int action();
 		
 		void say(std::string stuff);
-// 		std::string hi();
 		std::string myStuff;
 		
 		TestAppCS* CS;

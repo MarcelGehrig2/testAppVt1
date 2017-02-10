@@ -6,16 +6,15 @@ namespace testappsequencer {
 	
 	class  TestAppCS;
 	
-	class StepA : public Step {
+	class GoTo : public Step {
 	public:
-		StepA(Sequencer& S, TestAppCS* CS, BaseSequence* caller);
+		GoTo(Sequencer& S, TestAppCS* CS, BaseSequence* caller);
 		
+		int operator()(int x, int y);
 		int action();
 		bool checkExitCondition();
 		
+		int pos;
 		TestAppCS* CS;
 	};
-
-	
-	
 };

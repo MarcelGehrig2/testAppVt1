@@ -27,6 +27,5 @@ int SequenceB::action()
 
 void SequenceB::say(std::string stuff)
 {
-// 	myStuff = stuff;
 	log.info() << "Sequence " << getName() << " says: " << stuff;
 }

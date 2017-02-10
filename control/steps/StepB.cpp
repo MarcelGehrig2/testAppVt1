@@ -1,6 +1,5 @@
 #include "StepB.hpp"
-#include <eeros/sequencer/Sequence.hpp>
-#include <eeros/sequencer/Sequencer.hpp>
+
 
 using namespace testappsequencer;
 

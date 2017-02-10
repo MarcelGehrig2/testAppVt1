@@ -1,13 +1,11 @@
 #include <iostream>
 #include <signal.h>
-// #include <b
+
 #include <eeros/core/Executor.hpp>
 #include <eeros/task/Lambda.hpp>
 #include <eeros/safety/SafetySystem.hpp>
-#include <eeros/safety/SafetySystem.hpp>
 #include <eeros/logger/Logger.hpp>
 #include <eeros/logger/StreamLogWriter.hpp>
-
 
 #include "control/controlSystem/TestAppCS.hpp"
 #include "control/safetySystem/TestAppSafetyProperties.hpp"

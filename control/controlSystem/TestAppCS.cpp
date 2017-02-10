@@ -1,60 +1,32 @@
-#include "TestAppCS.hpp"
-// #include <eeros/math/Matrix.hpp>
-// #include <iostream>
-// #include <unistd.h>
-// #include <eeros/core/EEROSException.hpp>
-// #include <eeros/hal/HAL.hpp>
+#include <math.h> 
+#include <iomanip>
+
 #include <eeros/core/Executor.hpp>
 #include <eeros/task/Periodic.hpp>
-// #include <eeros/core/PeriodicCounter.hpp>
 
-// #include <eeros/control/SignalProbeBlock.hpp>
-// #include "NANto0Block.hpp"
-#include <math.h> 
-
-#include <iomanip>
+#include "TestAppCS.hpp"
 
 using namespace testappsequencer;
 using namespace eeros::control;
 using namespace std;
 
-	TestAppCS::TestAppCS() :
+TestAppCS::TestAppCS() :
 	
-	stepA(0, 5, 3),
-// 	stepA(0, 4, 400000),
+stepA(0, 5, 3),
+
+timedomain("Main time domain", dt, false)
+
+{
+		
+	// Connect Blocks
+	probeA.getIn().connect(stepA.getOut());
+			
 	
-// 	probeA();
-
-
-	timedomain("Main time domain", dt, false)
-// // 	timedomain1000("Logger time domain", 1, true)
-
-	{
-// 		stepA.setInitValue(3);
-// 		using clk = std::chrono::steady_clock;		
-		
-		// Connect Blocks
-		probeA.getIn().connect(stepA.getOut());
-				
-		
-		// Run blocks
-		timedomain.addBlock(&stepA);
-		timedomain.addBlock(&probeA);
+	// Run blocks
+	timedomain.addBlock(&stepA);
+	timedomain.addBlock(&probeA);
 // 				
-		eeros::task::Periodic td("control system",dt, timedomain);	
-		eeros::Executor::instance().add(td);
-// 		td
-	}
+	eeros::task::Periodic td("control system",dt, timedomain);	
+	eeros::Executor::instance().add(td);
+}
 	
-// 	void TestAppCS::start() {
-// 		//timedomain.start();
-// 	}
-// 
-// 	void TestAppCS::stop() {
-// 		//timedomain.stop();
-// 		//timedomain.join();
-// 	}
-// 
-// 	void TestAppCS::setRefSwitch(bool s) {
-// 		xy_refPos_switch.switchToInput(s);
-// 	}
